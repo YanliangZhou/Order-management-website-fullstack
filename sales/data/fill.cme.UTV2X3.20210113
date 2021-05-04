@@ -1,0 +1,2 @@
+time	side	qty	symbol	px	exchange	class	description	tags	local_time	source	orderID	exchangeOID	fillID	strategy	ilink	px_multiplier	multiplier	trader-owner	OC
+20210312-12:26:31.698636	Buy	9	ESH1	378375	CME			N	20210113-12:26:31.698636		82503001	647839745266	46623	TRICYCLE	UTV2X3	46623		Unknown-Unknown

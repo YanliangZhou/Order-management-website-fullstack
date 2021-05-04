@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<table id="tables" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Side</th>
+            <th>Qty</th>
+            <th>Sym</th>
+            <th>PX</th>
+            <th>Ex</th>
+            <th>C</th>
+            <th>D</th>
+            <th>Tags</th>
+            <th>L-Time</th>
+            <th>Source</th>
+            <th>OID</th>
+            <th>Ex-OID</th>
+            <th>FillID</th>
+            <th>Strategy</th>
+            <th>Ilink</th>
+            <th>Px_Mul</th>
+            <th>Mul</th>
+            <th>TO</th>
+            <th>OC</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in order_list %}
+            <tr>
+            <td>{{ forloop.counter }}</td>
+<!--            <td>{{ i.time|date:"Y-m-d H:i:s.u" }}</td>-->
+            <td>{{ i.time }}</td>
+            <td>{{ i.side }}</td>
+            <td>{{ i.qty }}</td>
+            <td>{{ i.symbol }}</td>
+            <td>{{ i.px }}</td>
+            <td>{{ i.exchange }}</td>
+            <td>{{ i.class_type }}</td>
+            <td>{{ i.description }}</td>
+            <td>{{ i.tags }}</td>
+            <td>{{ i.local_time }}</td>
+            <td>{{ i.source }}</td>
+            <td>{{ i.orderID }}</td>
+            <td>{{ i.exchangeOID }}</td>
+            <td>{{ i.fillID }}</td>
+            <td>{{ i.strategy }}</td>
+            <td>{{ i.ilink }}</td>
+            <td>{{ i.px_multiplier }}</td>
+            <td>{{ i.multiplier }}</td>
+            <td>{{ i.TO }}</td>
+            <td>{{ i.OC }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

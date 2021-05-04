@@ -1,0 +1,3 @@
+0
+b'time\tside\tqty\tsymbol\tpx\texchange\tclass\tdescription\ttags\tlocal_time\tsource\torderID\texchangeOID\tfillID\tstrategy\tilink\tpx_multiplier\tmultiplier\ttrader-owner\tOC\n'
+b'20210312-12:26:31.698636\tBuy\t9\tESH1\t378375\tCME\t\t\tN\t20210113-12:26:31.698636\t\t82503001\t647839745266\t46623\tTRICYCLE\tUTV2X3\t46623\t\tUnknown-Unknown\n'

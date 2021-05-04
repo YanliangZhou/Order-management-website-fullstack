@@ -1,0 +1,147 @@
+<!doctype html>
+    <html lang="en">
+        <head>
+                        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+            <style>
+                body{
+                    margin: 0;
+                    padding: 0;
+                }
+                .header
+                {
+                    height: 100vh;
+                    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(/static/image.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: sans-serif;
+                }
+                h1
+                {
+                    position: absolute;
+                    top: 40%;
+                    left: 40%;
+                    color: #fff;
+                    margin-bottom: 30px;
+                    font-size: 70px;
+                    letter-spacing: 2px;
+                    text-align: center;
+                }
+                .search-field
+                {
+                    height: 50px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 25px;
+                    outline: none;
+                }
+                .search-time
+                {
+                    width: 300px;
+                }
+                .search-side
+                {
+                    width: 150px;
+                }
+                .search-qty
+                {
+                    width: 150px;
+                }
+                .search-symbol
+                {
+                    width: 150px;
+                }
+                .search-price
+                {
+                    width: 150px;
+                }
+                .search-exchange
+                {
+                    width: 150px;
+                }
+                .search-strategy
+                {
+                    width: 150px;
+                }
+                .search-ilink
+                {
+                    width: 150px;
+                }
+                .search-traderowner
+                {
+                    width: 150px;
+                }
+                .search-btn
+                {
+                    height: 50px;
+                    width: 150px;
+                    background: #ffeb3b;
+                    border: none;
+                    color: #000;
+                    border-radius: 25px;
+                }
+                .search-btn:hover{
+                    background: #ffc107;
+                    cursor: pointer;
+                }
+                .form-box
+                {
+                    background: rgba(0,0,0,0.5);
+                    padding: 30px;
+                    border-radius: 25px;
+                }
+          </style>
+            <title>Order Manager</title>
+
+        </head>
+        <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand" href={% url 'home' %}>Order Manager</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href={% url 'home' %}>Home <span class="sr-only">(current)</span></a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href={% url 'list_order' %}>Orders</a>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href={% url 'upload' %}>Upload</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+
+
+            <div class="header">
+                <form action="{% url 'list_order' %}" method="GET">
+                    <h1>Find Orders</h1>
+                    <div class="form-box">
+                        <input type="text" class="search-field search-time" placeholder="Time(min max)" name="search_time">
+                        <input type="text" class="search-field search-side" placeholder="Side" name="search_side">
+                        <input type="text" class="search-field search-qty" placeholder="Qty(min max)" name="search_qty">
+                        <input type="text" class="search-field search-symbol" placeholder="Symbol" name="search_symbol">
+                        <input type="text" class="search-field search-price" placeholder="Price(min max)" name="search_price">
+                        <input type="text" class="search-field search-exchange" placeholder="Exchange" name="search_exchange">
+                        <input type="text" class="search-field search-strategy" placeholder="Strategy" name="search_strategy">
+                        <input type="text" class="search-field search-ilink" placeholder="Ilink" name="search_ilink">
+                        <input type="text" class="search-field search-traderowner" placeholder="Trader-owner" name="search_trader-owner">
+                        <button class="search-btn" type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+
+        </body>
+    </html>

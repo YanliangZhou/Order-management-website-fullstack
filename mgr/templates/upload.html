@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="input-group bg-dark text-light">
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{uf.as_p}}
+<!--                    <input type="submit" value="Upload Files" class="btn btn-md btn-light bg-dark text-light"  />-->
+            <button type="submit" class="btn btn-md btn-light bg-dark text-light">Upload Files</button>
+        </form>
+    </div>
+
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
+{% endblock %}

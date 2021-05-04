@@ -1,0 +1,2 @@
+time,side,qty,symbol,px,exchange,class,description,tags,local_time,source,orderID,exchangeOID,fillID,strategy,ilink,px_multiplier,multiplier,trader-owner,OC
+20210127-12:26:35.494761,Sell,4,ESH1,378375,CME,,,N,20210113-12:26:35.494761,,82503003,6.4784E+11,46636,TRICYCLE,UTV2X3,46636,,Unknown-Unknown,
