@@ -1,1 +1,0 @@
-如果需要路由的太多，比如sales/1, sales/2, sales/3，url除了可以拆分跳转子urls文件，还能用正则表达式来匹配，比如path('sales/', sales.urls),可以用正则表达式匹配sxxex
