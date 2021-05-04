@@ -1,0 +1,47 @@
+快速导入其他已有模块，直接在输入模块名称后按alt+enter
+alt+shift+鼠标拉选就能选择选中列的文本并可以同时输入相同内容，可以用在在n行的前面都加上某些相同内容
+ctrl+点击函数名，就能跳转到函数定义处
+管理网站用户名：yanliangzhou，密码：123456
+https://blog.csdn.net/bbwangj/article/details/93409237
+http://127.0.0.1:8000/mgr/sign.html final web
+http://127.0.0.1:8000/admin/        administrator web
+mysql_secure_installation #初始化
+添加防火墙策略
+firewall-cmd --permanent --add-service=mysql #加入防火墙，名字mysql 永久有效
+firewall-cmd --reload #立即生效
+登录数据库
+mysql -u root -p #u参数用来指定以root管理员的身份登录，-p参数用来验证该用户在数据库中的密码值
+数据库基本命令
+SHOW databases; #查看当前都有哪些数据库
+use mysql #进入mysql数据库
+SHOW TABLES; #看表单user
+exit #退出mysql数据库
+用户管理
+SET password = PASSWORD("linuxprobe"); #修改当前数据库用户密码
+CREATE USER luke@localhost IDENTIFIED BY "linuxprobe"; #创建用户 luke 指定密码 linuxprobe
+GRANT SELECT,UPDATE,DELETE,INSERT ON mysql.user TO luke@localhost; #针对mysql数据库中的user表单向账户luke授予查询、更新、删除以及插入等权限
+REVOKE SELECT,UPDATE,DELETE,INSERT ON mysql.user FROM luke@localhost; #移除刚才的授权
+SHOW GRANTS FOR luke@localhost; #查看一下账户luke的权限
+数据库的创建与删除
+import: load data local infile '/home/yanliangzhou/PycharmProjects/Python3/djangoProject/SPY.txt' into table common_order fields terminated by ',' escaped by '"' lines terminated by '\n';
+CREATE DATABASE linuxprobe; #创建数据库 linuxprobe
+DROP DATABASE linuxprobe :#删除数据库
+CREATE TABLE mybook (name char(15),price int,pages int); #创建数据表单，然后进行表单的初始化
+DESCRIBE mybook; #描述表单
+INSERT INTO mybook(name,price,pages) VALUES("linuxprobe","60","518"); #向表单中插入一条记录
+delete from mybook where 字段='value'
+UPDATE mybook SET price=55 ; #更新表单记录
+SELECT name,price FROM mybook; #按照字段查询表单
+SELECT * FROM mybook; #查询表单全部内容
+SELECT * FROM mybook WHERE price>75; #where条件匹配查询price>75的记录
+DELETE FROM mybook; #清空表单内容
+要让id不自动生成，在另外的列名称定义括号中加上primary_key = True
+bootstramp的br是container shi zuojuli
+解决Django-Error: That port is already in use：
+    1.使用python manage.py runserver 8001 开一个新的端口。
+    2.kill掉原来的端口(在root条件下)。
+    2.1 在终端输入lsof -i:8000，列出进程信息。
+    2.2 然后，找到进程的PID号，比如我的PID号就是24194
+    2.3 输入kill -9 PID，比如kill -9 24194 就可以关闭该端口了。
+    2.4使用python manage.py runserver 就能继续使用8000端口了。
+将queryset对象转化为list类型，否则不能被转化成JSON字符串
